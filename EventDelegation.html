@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <ul id="mylinks">
+        <li id="l1"> item 1</li>
+        <li id="l2"> item 2</li>
+        <li id="l3"> item 3</li>
+
+    </ul>
+
+    <script>
+        var list = document.getElementById('mylinks');
+
+
+        list.onclick = function (e) {
+            if (e.target.id == 'l1')
+            {
+               
+                alert('item 1 clicked');
+            }
+            else if (e.target.id == 'l2') {
+                alert('item 2 clicked');
+            }
+            else if (e.target.id == 'l3') {
+                alert('item 3 clicked');
+            }
+
+        };
+    </script>
+</body>
+</html>

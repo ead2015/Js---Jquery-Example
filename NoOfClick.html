@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <input type="button" id="b1" value="0"/>
+    <script>
+
+        var button = document.getElementById('b1');
+        function f1() {
+        
+
+            var val = button.value;
+            button.value = parseInt(val) + 1;
+        }
+        button.onclick = f1;
+    </script>
+</body>
+</html>

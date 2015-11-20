@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p id="p1">My paragraph</p>
+    <p id="p2">My paragraph 2</p>
+    <script>
+
+        var x = document.body;
+        
+
+        x.onclick = f1;
+        x.onmouseover = f1;
+        x.onmouseout = f1;
+
+        
+        function f1(e)
+        {
+            console.log(e.type);
+            
+                if (e.type == 'mouseover') {
+                    if (e.target.tagName == 'P') {
+                        e.target.style.backgroundColor = "red";
+                    }
+                }
+                else if (e.type == 'mouseout') {
+
+                    e.target.style.backgroundColor = "";
+                }
+            
+        }
+
+    </script>
+</body>
+</html>

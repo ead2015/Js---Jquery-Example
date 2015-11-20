@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="myBtn" value="My Button"/>
+    <script>
+        var btn = document.getElementById('myBtn');
+        btn.onclick = function(event){
+            alert(event.eventPhase); //2 at target
+        };
+        document.body.addEventListener('click', function(event){
+            alert(event.eventPhase); //1 capturing
+        }, true);
+        document.body.onclick = function(event){
+            alert(event.eventPhase); //3 //bubbling
+        };
+
+    </script>
+</body>
+</html>

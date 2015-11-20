@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="d1">this is a div
+
+        <p id="p1"> this is a paragraph</p>
+
+    </div>
+
+    <script>
+
+        var p1 = document.getElementById('p1');
+        var mydiv = document.getElementById('d1');
+
+        function f1()
+        {
+            console.log('A');
+        }
+
+        function f2()
+        {
+            console.log('B');
+        }
+
+        p1.addEventListener('click', f1, false);
+        p1.addEventListener('click', f1, true);
+        mydiv.addEventListener('click', f2, false);
+        mydiv.addEventListener('click', f2, true);
+
+    </script>
+</body>
+</html>

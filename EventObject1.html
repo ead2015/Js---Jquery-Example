@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p id="p1" name="n" >This is a paragraph</p>
+     <p id="p2" name="n">This is 2nd  paragraph</p>
+     <p id="p3" name="n">This is 3rd paragraph</p>
+     <p id="p4" name="n">This is 4th paragraph</p>
+   
+    <script>
+
+        /*var x = document.getElementById('p1');
+        var y = document.getElementById('p2');
+
+        x.onclick = f1;
+        x.onmouseover = f1;
+        x.onmouseout = f1;
+
+        y.onclick = f1;
+        y.onmouseover = f1;
+        y.onmouseout = f1;
+        */
+
+       /* document.body.onclick = f1;
+        document.body.onmouseover = f1;
+        document.body.onmouseout = f1;*/
+
+        //var list = document.getElementsByName('n');
+
+        var list = document.getElementsByTagName('P');
+        for (var i = 0; i < list.length; i++) {
+            list[i].onclick = f1;
+            list[i].onmouseover = f1;
+            list[i].onmouseout = f1;
+
+        }
+       // alert(list.length);
+        function f1(e)
+        {
+            console.log(e.type);
+            if (e.type == 'mouseover')
+            {
+                if (e.target.tagName === 'P') {
+                    e.target.style.backgroundColor = 'red';
+                }
+                
+            }
+            if (e.type == 'mouseout') {
+                e.target.style.backgroundColor = '';
+             
+
+            }
+            if (e.type == 'click') {
+               // e.target.style.backgroundColor = 'red';
+
+                alert('paragraph clicked and event type = ' + e.type + " target element  = " + e.target + " and id of element = " + e.target.id);
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

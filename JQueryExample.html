@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script type='text/javascript' src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        
+   <script type='text/javascript'>
+
+       $(document).ready(function () {
+
+           $('#tmpDialogue').hide();
+
+           $('#tmpOpen').click(function () {
+                                //$('#tmpDialogue').show('slow');
+                               //$('#tmpDialogue').slideDown('slow');
+                               $('#tmpDialogue').fadeIn('slow');
+                                                                           }
+                                                                           );
+           $('#tmpClose').click(function () {
+                                // $('#tmpDialogue').hide(50000);
+                                //  $('#tmpDialogue').slideUp(5000);
+                                    $('#tmpDialogue').fadeOut(5000);
+                                            }
+                                                   );
+       }  );
+   </script>
+    </head>
+    <body>
+        <input type='submit' id='tmpOpen' value='Open Dialogue' />
+
+<div id='tmpDialogue'>
+        <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut
+        vestibulum ornare augue. Fusce non purus vel libero mattis aliquet.
+        Vivamus interdum consequat risus. Integer feugiat fringilla est.
+        Vivamus libero. Vestibulum imperdiet arcu vitae nunc. Nunc est velit,
+        varius sed, faucibus quis,
+        </p>
+    <div id='tmpButtons'>
+    <input type='submit' id='tmpClose' value='Close Dialogue' />
+    </div>
+</div>
+    </body>
+</html>
